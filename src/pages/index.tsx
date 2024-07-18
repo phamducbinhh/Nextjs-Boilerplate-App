@@ -1,7 +1,7 @@
 'use client'
-import { Box, useTheme } from '@mui/material'
 import Head from 'next/head'
-import CustomTextField from 'src/components/core/text-field'
+import { ReactNode } from 'react'
+import UserLayout from 'src/views/layouts/UserLayout'
 
 export default function Home() {
   return (
@@ -12,10 +12,10 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <h1>Hello world!</h1>
-      <Box sx={{ margin: 6, width: '200px' }}>
-        <CustomTextField id='outlined-basic' label='Outlined' />
-      </Box>
     </>
   )
 }
+
+Home.getLayout = (page: ReactNode) => <UserLayout>{page}</UserLayout>
+Home.guestGuard = false
+Home.authGuard = false

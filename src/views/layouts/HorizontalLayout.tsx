@@ -14,15 +14,17 @@ import IconButton from '@mui/material/IconButton'
 
 // components
 import Icon from 'src/components/Icon'
-// import UserDropdown from 'src/views/layouts/components/user-dropdown'
-// import ModeToggle from 'src/views/layouts/components/mode-toggle'
-// import LanguageDropdown from 'src/views/layouts/components/language-dropdown'
+import UserDropdown from 'src/views/layouts/components/user-dropdown'
+import ModeToggle from 'src/views/layouts/components/mode-toggle'
+import LanguageDropdown from 'src/views/layouts/components/language-dropdown'
+
 // import CartProduct from 'src/views/layouts/components/cart-product'
 
 // ** Hooks
 import { useAuth } from 'src/hooks/useAuth'
 import { Button } from '@mui/material'
 import { useRouter } from 'next/router'
+import { ROUTE_CONFIG } from 'src/configs/route'
 
 // config
 // import { ROUTE_CONFIG } from 'src/configs/route'
@@ -110,7 +112,7 @@ const HorizontalLayout: NextPage<TProps> = ({ open, toggleDrawer, isHideMenu }) 
         </Typography>
         <LanguageDropdown />
         <ModeToggle />
-        <CartProduct />
+        {/* <CartProduct /> */}
         {user ? (
           <UserDropdown />
         ) : (
