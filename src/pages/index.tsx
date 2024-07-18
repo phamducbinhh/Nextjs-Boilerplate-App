@@ -1,7 +1,7 @@
 'use client'
 import Head from 'next/head'
 import { ReactNode } from 'react'
-import UserLayout from 'src/views/layouts/UserLayout'
+import LayoutNotApp from 'src/views/layouts/LayoutNotApp'
 
 export default function Home() {
   return (
@@ -16,6 +16,6 @@ export default function Home() {
   )
 }
 
-Home.getLayout = (page: ReactNode) => <UserLayout>{page}</UserLayout>
+Home.getLayout = (page: ReactNode) => <LayoutNotApp>{page}</LayoutNotApp>
 Home.guestGuard = false
 Home.authGuard = false
