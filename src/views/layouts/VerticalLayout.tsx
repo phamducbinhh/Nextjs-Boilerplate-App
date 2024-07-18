@@ -15,6 +15,7 @@ import IconButton from '@mui/material/IconButton'
 
 // ** Components
 import IconifyIcon from 'src/components/Icon'
+import ListVerticalLayout from './ListVerticalLayout'
 
 const drawerWidth: number = 240
 
@@ -63,7 +64,7 @@ const VerticalLayout: NextPage<TProps> = ({ open, toggleDrawer }) => {
         </IconButton>
       </Toolbar>
       <Divider />
-      {/* <ListVerticalLayout open={open} /> */}
+      <ListVerticalLayout open={open} />
     </Drawer>
   )
 }
