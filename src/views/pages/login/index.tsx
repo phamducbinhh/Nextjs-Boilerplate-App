@@ -203,7 +203,9 @@ const LoginPage: NextPage<TProps> = () => {
               }}
             >
               <Typography>{"Don't have an account?"}</Typography>
-              <Link href='/register'>{' Register'}</Link>
+              <Link style={{ color: theme.palette.primary.main }} href='/register'>
+                {' Register'}
+              </Link>
             </Box>
             <Typography sx={{ textAlign: 'center', marginTop: 2 }}>Or</Typography>
             <Box
@@ -231,7 +233,11 @@ const LoginPage: NextPage<TProps> = () => {
                   ></path>
                 </svg>
               </IconButton>
-              <IconButton sx={{ color: '#497ce2' }}>
+              <IconButton
+                sx={{
+                  color: theme.palette.mode === 'light' ? theme.palette.customColors.light : theme.palette.primary.main
+                }}
+              >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   aria-hidden='true'
